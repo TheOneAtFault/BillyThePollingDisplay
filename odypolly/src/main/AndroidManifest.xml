@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.odypolly" >
-    <application>
+    <application
+        android:name=".App">
         <service
             android:name="com.example.odypolly.Service.UsbService"
             android:enabled="true">

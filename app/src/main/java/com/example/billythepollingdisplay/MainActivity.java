@@ -48,6 +48,7 @@ public class MainActivity extends Activity {
             }
         }
     };
+
     private UsbService usbService;
     private MyHandler mHandler;
     private final ServiceConnection usbConnection = new ServiceConnection() {

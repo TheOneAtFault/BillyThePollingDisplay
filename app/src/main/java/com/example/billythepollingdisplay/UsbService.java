@@ -185,10 +185,12 @@ public class UsbService extends Service {
             for (Map.Entry<String, UsbDevice> entry : usbDevices.entrySet()) {
                 device = entry.getValue();
                 Log.d(TAG, String.format("USBDevice.HashMap (vid:pid) (%X:%X)-%b class:%X:%X name:%s",
-                        device.getVendorId(), device.getProductId(),
+                        device.getVendorId(),
+                        device.getProductId(),
                         UsbSerialDevice.isSupported(device),
                         device.getDeviceClass(), device.getDeviceSubclass(),
                         device.getDeviceName()));
+                Log.i("SerialTrack - VID:",device.getVendorId()+"");
             }
 
             for (Map.Entry<String, UsbDevice> entry : usbDevices.entrySet()) {
@@ -197,6 +199,9 @@ public class UsbService extends Service {
                 int devicePID = device.getProductId();
 
 //                if (deviceVID != 0x1d6b && (devicePID != 0x0001 && devicePID != 0x0002 && devicePID != 0x0003) && deviceVID != 0x5c6 && devicePID != 0x904c) {
+                if(deviceVID == 1659){
+                    Log.i("SerialTrack - VID:",device.getVendorId()+" - found");
+                }
                 if (UsbSerialDevice.isSupported(device)) {
                     // There is a supported device connected - request permission to access it.
                     requestUserPermission();

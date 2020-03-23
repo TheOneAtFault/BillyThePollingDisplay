@@ -1,4 +1,4 @@
-package com.example.odypolly.EntryPoints;
+package com.example.odypolly.Portal;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -14,15 +14,10 @@ import android.os.Message;
 import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.odypolly.Service.UsbService;
 
 import java.lang.ref.WeakReference;
-import java.util.PrimitiveIterator;
 import java.util.Set;
 
 public class USB_Polling extends Activity {
