@@ -17,8 +17,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import com.example.altodypolly.PortalAlt;
 
-import com.example.odypolly.PollingGate;
 
 import java.lang.ref.WeakReference;
 import java.util.Set;
@@ -43,6 +43,7 @@ public class MainActivity extends Activity {
             }
         });
 
-        PollingGate.enter(this, 1659);
+        PortalAlt portal = new PortalAlt(this,"text",1659);
+        portal.main();
     }
 }

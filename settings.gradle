@@ -1,3 +1,5 @@
 rootProject.name='BillyThePollingDisplay'
 include ':app'
 include ':odypolly'
+include ':altodypolly'
+include ':pureserial'
